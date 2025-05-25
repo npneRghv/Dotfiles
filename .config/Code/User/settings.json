@@ -1,0 +1,137 @@
+{
+    "editor.fontFamily": "monospace, consolig,  'monospace'",
+    "terminal.integrated.fontSize": 12,
+    "editor.fontLigatures": true,
+    "editor.lineNumbers": "relative",
+    "workbench.colorTheme": "Default Light+",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontSize": 12,
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
+    "keyboard.dispatch": "keyCode",
+    "workbench.sideBar.location": "right",
+    "terminal.integrated.fontLigatures.fallbackLigatures": [
+        "<--",
+        "<---",
+        "<<-",
+        "<-",
+        "->",
+        "->>",
+        "-->",
+        "--->",
+        "<==",
+        "<===",
+        "<<=",
+        "<=",
+        "=>",
+        "=>>",
+        "==>",
+        "===>",
+        ">=",
+        ">>=",
+        "<->",
+        "<-->",
+        "<--->",
+        "<---->",
+        "<=>",
+        "<==>",
+        "<===>",
+        "<====>",
+        "::",
+        ":::",
+        "<~~",
+        "</",
+        "</>",
+        "/>",
+        "~~>",
+        "==",
+        "!=",
+        "/=",
+        "~=",
+        "<>",
+        "===",
+        "!==",
+        "!===",
+        "<:",
+        ":=",
+        "*=",
+        "*+",
+        "<*",
+        "<*>",
+        "*>",
+        "<|",
+        "<|>",
+        "|>",
+        "+*",
+        "=*",
+        "=:",
+        ":>",
+        "/*",
+        "*/",
+        "+++",
+        "<!--",
+        "<!---"
+    ],
+    "workbench.startupEditor": "none",
+
+    "vim.leader": "<Space>",
+    "vim.hlsearch": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // Navigation
+        // Switch tabs
+        { "before": ["<leader>", ","], "commands": [":bprev"] },
+        { "before": ["<leader>", "."], "commands": [":bnext"] },
+
+        // Switch panes
+        {
+            "before": [ "<C-h>" ],
+            "commands": [ "workbench.action.focusLeftGroup" ]
+        },
+        {
+            "before": [ "<C-j>" ],
+            "commands": [ "workbench.action.focusBelowGroup" ]
+        },
+        {
+            "before": [ "<C-k>" ],
+            "commands": [ "workbench.action.focusAboveGroup" ]
+        },
+        {
+            "before": [ "<C-l>" ],
+            "commands": [ "workbench.action.focusRightGroup" ]
+        },
+
+        // Save, quit, etc.
+        { "before": ["leader", "w"], "commands": [":w!"] },
+        { "before": ["leader", "x"], "commands": [":q"] },
+
+        // Various commands
+        {
+            "before": ["<leader>", "c", "a"],
+            "commands": ["editor.action.quickFix"]
+        },
+        {
+            "before": ["<leader>", "c", "e"],
+            "commands": ["workbench.actions.view.problems"]
+        },
+        {
+            "before": [ "<leader>", "c", "s" ],
+            "commands": [ "workbench.action.showAllSymbols" ]
+        },
+        {
+            "before": [ "<leader>", "c", "c" ],
+            "commands": [ "workbench.action.focusActiveEditorGroup" ]
+        },
+
+        // Switch to sidebar items
+        {
+            "before": [ "<leader>", "e" ],
+            "commands": [ "workbench.view.explorer" ]
+        },
+        {
+            "before": [ "<leader>", "g" ],
+            "commands": [ "workbench.view.scm" ]
+        }
+    ],
+
+    "git.autofetch": true
+}
