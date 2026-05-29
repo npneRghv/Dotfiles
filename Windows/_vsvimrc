@@ -1,0 +1,53 @@
+" Show line numbers
+set relativenumber
+
+" Search related changes
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" Enable autoindentation
+set autoindent
+
+" Set scroll offset
+set scrolloff=10
+set nowrap
+
+" Go to implementation and references
+nnoremap gi :vsc Edit.GoToImplementation<CR>
+nnoremap gr :vsc Edit.FindAllReferences<CR>
+
+" Map a leader and redo
+let mapleader = ","
+nnoremap <leader>r :vsc Edit.Redo<CR>
+
+" Map git related leader shortcuts
+nnoremap <leader>g :vsc View.GitWindow<CR>
+nnoremap <leader>gh :vsc View.GitRepositoryWindow<CR>
+
+" Map database server and web server related shortcuts
+nnoremap <leader>sql :vsc View.SqlServerObjectExplorer<CR>
+nnoremap <leader>se :vsc View.ServerExplorer<CR>
+
+" Apply Hot Reload changes (.NET 6+) to see Razor/C# edits instantly
+nnoremap <leader>hr :vsc Debug.ApplyCodeChanges<CR>
+
+" Automatically remove unused 'using' statements and sort them
+nnoremap <leader>us :vsc Edit.RemoveAndSort<CR>
+
+" Expand or shrink selection based on syntax blocks (C# expressions or HTML tags)
+nnoremap <leader>] :vsc Edit.ExpandSelection<CR>
+nnoremap <leader>[ :vsc Edit.ContractSelection<CR>
+
+" Format document or selection
+nnoremap <leader>= :vsc Edit.FormatDocument<CR>
+vnoremap <leader>= :vsc Edit.FormatSelection<CR>
+
+" Flip between Controller and its Razor View (and vice-versa)
+nnoremap <leader>fv :vsc EditorContextMenus.CodeWindow.GoToView<CR>
+nnoremap <leader>fc :vsc OtherContextMenus.HTMLContext.GoToController<CR>
+
+" Navigate tabs within the current split 
+nnoremap <leader>j :vsc Window.NextSplitPane<CR>
+nnoremap <leader>k :vsc Window.PreviousSplitPane<CR>
