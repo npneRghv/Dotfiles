@@ -23,7 +23,7 @@ let mapleader = ","
 nnoremap <leader>r :vsc Edit.Redo<CR>
 
 " Map git related leader shortcuts
-nnoremap <leader>g :vsc View.GitWindow<CR>
+nnoremap <leader>gc :vsc View.GitWindow<CR>
 nnoremap <leader>gh :vsc View.GitRepositoryWindow<CR>
 
 " Map database server and web server related shortcuts
@@ -51,3 +51,6 @@ nnoremap <leader>fc :vsc OtherContextMenus.HTMLContext.GoToController<CR>
 " Navigate tabs within the current split 
 nnoremap <leader>j :vsc Window.NextSplitPane<CR>
 nnoremap <leader>k :vsc Window.PreviousSplitPane<CR>
+
+" Close the current tab
+nnoremap <leader>x :vsc Window.CloseDocumentWindow<CR>
