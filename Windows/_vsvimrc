@@ -22,10 +22,6 @@ nnoremap gr :vsc Edit.FindAllReferences<CR>
 let mapleader = ","
 nnoremap <leader>r :vsc Edit.Redo<CR>
 
-" Map git related leader shortcuts
-nnoremap <leader>gc :vsc View.GitWindow<CR>
-nnoremap <leader>gh :vsc View.GitRepositoryWindow<CR>
-
 " Map database server and web server related shortcuts
 nnoremap <leader>sql :vsc View.SqlServerObjectExplorer<CR>
 nnoremap <leader>se :vsc View.ServerExplorer<CR>
@@ -52,5 +48,19 @@ nnoremap <leader>fc :vsc OtherContextMenus.HTMLContext.GoToController<CR>
 nnoremap <leader>j :vsc Window.NextSplitPane<CR>
 nnoremap <leader>k :vsc Window.PreviousSplitPane<CR>
 
-" Close the current tab
+" Tab related
 nnoremap <leader>x :vsc Window.CloseDocumentWindow<CR>
+nnoremap <leader>tp :vsc Window.PinTab<CR>
+nnoremap <leader>to :vsc Window.KeepTabOpen<CR>
+
+" Sync and collapse solution explorer
+nnoremap <leader>ss :vsc SolutionExplorer.SyncWithActiveDocument<CR>
+
+" View various tool windows
+nnoremap <leader>gt :vsc View.Terminal<CR>
+nnoremap <leader>e :vsc View.ErrorList<CR>
+nnoremap <leader>t :vsc View.TaskList<CR>
+nnoremap <leader>c :vsc View.GitWindow<CR>
+nnoremap <leader>h :vsc View.GitRepositoryWindow<CR>
+
+
