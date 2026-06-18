@@ -1,11 +1,12 @@
 {
-    "editor.fontFamily": "monospace, consolig,  'monospace'",
-    "terminal.integrated.fontSize": 12,
+    "editor.fontFamily": "Cascadia Code, consolig, 'monospace'",
+    "terminal.integrated.fontSize": 11,
     "editor.fontLigatures": true,
     "editor.lineNumbers": "relative",
     "workbench.colorTheme": "Default Light+",
     "workbench.iconTheme": "material-icon-theme",
     "editor.fontSize": 12,
+    "editor.cursorSurroundingLines": 10,
     "editor.minimap.enabled": false,
     "breadcrumbs.enabled": false,
     "keyboard.dispatch": "keyCode",
@@ -76,61 +77,82 @@
 
     "vim.leader": "<Space>",
     "vim.hlsearch": true,
+    "vim.incsearch": true,
+    "vim.ignorecase": true,
+    "vim.smartcase": true,
     "vim.normalModeKeyBindingsNonRecursive": [
+        // LSP navigation
+        { "before": [ "g", "i" ], "commands": [ "editor.action.goToImplementation" ] },
+        { "before": [ "g", "r" ], "commands": [ "editor.action.goToReferences" ] },
+
         // Navigation
         // Switch tabs
         { "before": ["<leader>", ","], "commands": [":bprev"] },
         { "before": ["<leader>", "."], "commands": [":bnext"] },
 
-        // Switch panes
+        // Cycle / switch editor panes / groups
         {
-            "before": [ "<C-h>" ],
-            "commands": [ "workbench.action.focusLeftGroup" ]
-        },
-        {
-            "before": [ "<C-j>" ],
-            "commands": [ "workbench.action.focusBelowGroup" ]
-        },
-        {
-            "before": [ "<C-k>" ],
-            "commands": [ "workbench.action.focusAboveGroup" ]
-        },
-        {
-            "before": [ "<C-l>" ],
-            "commands": [ "workbench.action.focusRightGroup" ]
+            "before": [ "<leader>", "g", "p" ],
+            "commands": [ "workbench.action.focusNextGroup" ]
         },
 
         // Save, quit, etc.
         { "before": ["leader", "w"], "commands": [":w!"] },
         { "before": ["leader", "x"], "commands": [":q"] },
 
-        // Various commands
+        // Redo
+        { "before": [ "<leader>", "r" ], "commands": [ "redo" ] },
+
+        // Format document
+        { "before": [ "<leader>", "=" ], "commands": [ "editor.action.formatDocument" ] },
+
+        // Expand / shrink selection by syntax
+        { "before": [ "<leader>", "]" ], "commands": [ "editor.action.smartSelect.expand" ] },
+        { "before": [ "<leader>", "[" ], "commands": [ "editor.action.smartSelect.shrink" ] },
+
+        // Code group
         {
             "before": ["<leader>", "c", "a"],
             "commands": ["editor.action.quickFix"]
         },
         {
-            "before": ["<leader>", "c", "e"],
-            "commands": ["workbench.actions.view.problems"]
+            "before": ["<leader>", "c", "i"],
+            "commands": ["editor.action.showHover"]
         },
         {
             "before": [ "<leader>", "c", "s" ],
             "commands": [ "workbench.action.showAllSymbols" ]
         },
         {
+            "before": ["<leader>", "g", "e"],
+            "commands": ["workbench.actions.view.problems"]
+        },
+        {
             "before": [ "<leader>", "c", "c" ],
             "commands": [ "workbench.action.focusActiveEditorGroup" ]
         },
+
+        // Terminal
+        { "before": [ "<leader>", "t" ], "commands": [ "workbench.action.terminal.toggleTerminal" ] },
 
         // Switch to sidebar items
         {
             "before": [ "<leader>", "e" ],
             "commands": [ "workbench.view.explorer" ]
         },
+        // Reveal / sync active file in Explorer
         {
-            "before": [ "<leader>", "g" ],
+            "before": [ "<leader>", "s", "s" ],
+            "commands": [ "workbench.files.action.showActiveFileInExplorer" ]
+        },
+        {
+            "before": [ "<leader>", "g", "g" ],
             "commands": [ "workbench.view.scm" ]
         }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        // Format selection
+        { "before": [ "<leader>", "=" ], "commands": [ "editor.action.formatSelection" ] }
     ],
 
     "git.autofetch": true,

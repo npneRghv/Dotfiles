@@ -14,13 +14,59 @@ set autoindent
 set scrolloff=10
 set nowrap
 
-" Go to implementation and references
+" Use <Space> as the leader key (uniform with VS Code)
+let mapleader = " "
+
+" ===== Shared bindings (mirrored in VS Code) =====
+
+" LSP navigation
 nnoremap gi :vsc Edit.GoToImplementation<CR>
 nnoremap gr :vsc Edit.FindAllReferences<CR>
 
-" Map a leader and redo
-let mapleader = ","
+" Format document or selection
+nnoremap <leader>= :vsc Edit.FormatDocument<CR>
+vnoremap <leader>= :vsc Edit.FormatSelection<CR>
+
+" Expand or shrink selection based on syntax blocks (C# expressions or HTML tags)
+nnoremap <leader>] :vsc Edit.ExpandSelection<CR>
+nnoremap <leader>[ :vsc Edit.ContractSelection<CR>
+
+" Redo
 nnoremap <leader>r :vsc Edit.Redo<CR>
+
+" Code actions / quick fix (lightbulb)
+nnoremap <leader>ca :vsc View.QuickActions<CR>
+
+" Quick info / hover docs
+nnoremap <leader>ci :vsc Edit.QuickInfo<CR>
+
+" Navigate to symbol
+nnoremap <leader>cs :vsc Edit.GoToAll<CR>
+
+" Diagnostics / error list
+nnoremap <leader>ge :vsc View.ErrorList<CR>
+
+" File explorer (Solution Explorer)
+nnoremap <leader>e :vsc View.SolutionExplorer<CR>
+
+" Terminal
+nnoremap <leader>t :vsc View.Terminal<CR>
+
+" Git / source control
+nnoremap <leader>gg :vsc View.GitWindow<CR>
+
+" Save and close
+nnoremap <leader>w :vsc File.SaveSelectedItems<CR>
+nnoremap <leader>x :vsc Window.CloseDocumentWindow<CR>
+
+" Tab navigation
+nnoremap <leader>. :vsc Window.NextTab<CR>
+nnoremap <leader>, :vsc Window.PreviousTab<CR>
+
+" Cycle horizontal split panes within the active tab group
+nnoremap <leader>gp :vsc Window.NextSplitPane<CR>
+
+" ===== Visual Studio only (no VS Code equivalent) =====
 
 " Map database server and web server related shortcuts
 nnoremap <leader>sql :vsc View.SqlServerObjectExplorer<CR>
@@ -32,24 +78,11 @@ nnoremap <leader>hr :vsc Debug.ApplyCodeChanges<CR>
 " Automatically remove unused 'using' statements and sort them
 nnoremap <leader>us :vsc Edit.RemoveAndSort<CR>
 
-" Expand or shrink selection based on syntax blocks (C# expressions or HTML tags)
-nnoremap <leader>] :vsc Edit.ExpandSelection<CR>
-nnoremap <leader>[ :vsc Edit.ContractSelection<CR>
-
-" Format document or selection
-nnoremap <leader>= :vsc Edit.FormatDocument<CR>
-vnoremap <leader>= :vsc Edit.FormatSelection<CR>
-
 " Flip between Controller and its Razor View (and vice-versa)
 nnoremap <leader>fv :vsc EditorContextMenus.CodeWindow.GoToView<CR>
 nnoremap <leader>fc :vsc OtherContextMenus.HTMLContext.GoToController<CR>
 
-" Navigate tabs within the current split 
-nnoremap <leader>j :vsc Window.NextSplitPane<CR>
-nnoremap <leader>k :vsc Window.PreviousSplitPane<CR>
-
 " Tab related
-nnoremap <leader>x :vsc Window.CloseDocumentWindow<CR>
 nnoremap <leader>tp :vsc Window.PinTab<CR>
 nnoremap <leader>to :vsc Window.KeepTabOpen<CR>
 
@@ -58,9 +91,4 @@ nnoremap <leader>ss :vsc SolutionExplorer.SyncWithActiveDocument<CR>
 
 " View various tool windows
 nnoremap <leader>gt :vsc View.TaskList<CR>
-nnoremap <leader>ge :vsc View.ErrorList<CR>
-nnoremap <leader>t :vsc View.Terminal<CR>
-nnoremap <leader>gc :vsc View.GitWindow<CR>
 nnoremap <leader>gh :vsc View.GitRepositoryWindow<CR>
-
-
