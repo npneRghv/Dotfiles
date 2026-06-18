@@ -64,7 +64,7 @@ nnoremap <leader>. :vsc Window.NextTab<CR>
 nnoremap <leader>, :vsc Window.PreviousTab<CR>
 
 " Cycle horizontal split panes within the active tab group
-nnoremap <leader>gp :vsc Window.NextSplitPane<CR>
+nnoremap <leader>p :vsc Window.NextSplitPane<CR>
 
 " ===== Visual Studio only (no VS Code equivalent) =====
 

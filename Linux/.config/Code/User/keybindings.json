@@ -1,15 +1,32 @@
 // Place your key bindings in this file to override the defaults
 [
     // Misc
+    // Shift+Esc closes whichever tool window is focused (mirrors Visual Studio)
     {
         "key": "shift+escape",
-        "command": "workbench.action.closePanel"
+        "command": "workbench.action.closePanel",
+        "when": "panelFocus || terminalFocus"
+    },
+    {
+        "key": "shift+escape",
+        "command": "workbench.action.closeSidebar",
+        "when": "sideBarFocus"
+    },
+    {
+        "key": "shift+escape",
+        "command": "workbench.action.closeAuxiliaryBar",
+        "when": "auxiliaryBarFocus"
     },
 
     // File tree related
     {
         "command": "workbench.action.toggleSidebarVisibility",
         "key": "ctrl+e"
+    },
+    {
+        "key": "ctrl+\\",
+        "command": "workbench.files.action.collapseExplorerFolders",
+        "when": "filesExplorerFocus"
     },
     {
         "key": "n",

@@ -3,14 +3,14 @@
     "terminal.integrated.fontSize": 11,
     "editor.fontLigatures": true,
     "editor.lineNumbers": "relative",
-    "workbench.colorTheme": "Default Light+",
-    "workbench.iconTheme": "material-icon-theme",
-    "editor.fontSize": 12,
+    "workbench.colorTheme": "Light+",
+    "workbench.iconTheme": "a-file-icon-vscode",
+    "editor.fontSize": 11,
     "editor.cursorSurroundingLines": 10,
     "editor.minimap.enabled": false,
     "breadcrumbs.enabled": false,
     "keyboard.dispatch": "keyCode",
-    "workbench.sideBar.location": "right",
+    "workbench.sideBar.location": "left",
     "terminal.integrated.fontLigatures.fallbackLigatures": [
         "<--",
         "<---",
@@ -74,6 +74,7 @@
         "<!---"
     ],
     "workbench.startupEditor": "none",
+    "explorer.autoReveal": false,
 
     "vim.leader": "<Space>",
     "vim.hlsearch": true,
@@ -92,7 +93,7 @@
 
         // Cycle / switch editor panes / groups
         {
-            "before": [ "<leader>", "g", "p" ],
+            "before": [ "<leader>", "p" ],
             "commands": [ "workbench.action.focusNextGroup" ]
         },
 
@@ -121,7 +122,7 @@
         },
         {
             "before": [ "<leader>", "c", "s" ],
-            "commands": [ "workbench.action.showAllSymbols" ]
+            "commands": [ "workbench.action.quickOpen" ]
         },
         {
             "before": ["<leader>", "g", "e"],
@@ -138,7 +139,7 @@
         // Switch to sidebar items
         {
             "before": [ "<leader>", "e" ],
-            "commands": [ "workbench.view.explorer" ]
+            "commands": [ "workbench.files.action.focusFilesExplorer" ]
         },
         // Reveal / sync active file in Explorer
         {
