@@ -3,9 +3,9 @@
     "terminal.integrated.fontSize": 11,
     "editor.fontLigatures": true,
     "editor.lineNumbers": "relative",
-    "workbench.colorTheme": "Light+",
+    "workbench.colorTheme": "Quiet Light",
     "workbench.iconTheme": "a-file-icon-vscode",
-    "editor.fontSize": 11,
+    "editor.fontSize": 10.5,
     "editor.cursorSurroundingLines": 10,
     "editor.minimap.enabled": false,
     "breadcrumbs.enabled": false,
@@ -136,6 +136,11 @@
         // Terminal
         { "before": [ "<leader>", "t" ], "commands": [ "workbench.action.terminal.toggleTerminal" ] },
 
+        // Pin tab / keep tab open
+        { "before": [ "<leader>", "t", "p" ], "commands": [ "workbench.action.pinEditor" ] },
+        { "before": [ "<leader>", "t", "u" ], "commands": [ "workbench.action.unpinEditor" ] },
+        { "before": [ "<leader>", "t", "o" ], "commands": [ "workbench.action.keepEditor" ] },
+
         // Switch to sidebar items
         {
             "before": [ "<leader>", "e" ],
@@ -157,5 +162,62 @@
     ],
 
     "git.autofetch": true,
-    "git.confirmSync": false
+    "git.confirmSync": false,
+    "workbench.productIconTheme": "a-file-icon-vscode-product-icon-theme",
+    "mssql.connectionGroups": [
+        {
+            "name": "ROOT",
+            "id": "ROOT"
+        },
+        {
+            "name": "Pictoroo",
+            "description": "All pictoroo databases",
+            "color": "#EAA300",
+            "id": "36bf278e-98f7-4637-839f-7daf874795ea",
+            "parentId": "ROOT"
+        }
+    ],
+    "mssql.connections": [
+        {
+            "authenticationType": "SqlLogin",
+            "connectTimeout": 30,
+            "applicationName": "vscode-mssql",
+            "applicationIntent": "ReadWrite",
+            "server": "dropbox",
+            "database": "Pictoroo_local",
+            "user": "sa",
+            "password": "",
+            "commandTimeout": 30,
+            "encrypt": "Mandatory",
+            "groupId": "36bf278e-98f7-4637-839f-7daf874795ea",
+            "profileName": "Pictoroo local",
+            "trustServerCertificate": true,
+            "savePassword": true,
+            "id": "cff84892-e955-4565-a518-9c336b32273f",
+            "profileSource": 0
+        },
+        {
+            "authenticationType": "SqlLogin",
+            "connectTimeout": 30,
+            "applicationName": "vscode-mssql",
+            "applicationIntent": "ReadWrite",
+            "server": "192.168.44.10",
+            "database": "Pictoroo_Test",
+            "user": "sa",
+            "password": "",
+            "commandTimeout": 30,
+            "encrypt": "Mandatory",
+            "groupId": "36bf278e-98f7-4637-839f-7daf874795ea",
+            "profileName": "Pictoroo test",
+            "trustServerCertificate": true,
+            "savePassword": true,
+            "id": "922b5723-3a58-41c2-97c2-5e3b9edd060a"
+        }
+    ],
+    "chat.editor.fontSize": 12,
+    "chat.fontSize": 12,
+    "debug.console.fontSize": 12,
+    "scm.inputFontSize": 12,
+    "markdown.preview.fontSize": 12,
+    "diffEditor.renderSideBySide": false
 }
