@@ -212,12 +212,30 @@
             "trustServerCertificate": true,
             "savePassword": true,
             "id": "922b5723-3a58-41c2-97c2-5e3b9edd060a"
+        },
+        {
+            "authenticationType": "SqlLogin",
+            "connectTimeout": 30,
+            "applicationName": "vscode-mssql",
+            "applicationIntent": "ReadWrite",
+            "server": "192.168.44.10",
+            "database": "Pictoroo",
+            "user": "sa",
+            "password": "",
+            "commandTimeout": 30,
+            "encrypt": "Mandatory",
+            "groupId": "36bf278e-98f7-4637-839f-7daf874795ea",
+            "profileName": "Pictoroo live",
+            "trustServerCertificate": true,
+            "savePassword": true,
+            "id": "f9dab550-0243-4b2d-ad7d-441a3c2c431f"
         }
     ],
     "chat.editor.fontSize": 12,
     "chat.fontSize": 12,
     "debug.console.fontSize": 12,
-    "scm.inputFontSize": 12,
+    "scm.inputFontSize": 11,
     "markdown.preview.fontSize": 12,
-    "diffEditor.renderSideBySide": false
+    "diffEditor.renderSideBySide": true,
+    "claudeCode.preferredLocation": "panel"
 }
