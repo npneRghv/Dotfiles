@@ -98,8 +98,8 @@
         },
 
         // Save, quit, etc.
-        { "before": ["leader", "w"], "commands": [":w!"] },
-        { "before": ["leader", "x"], "commands": [":q"] },
+        { "before": ["<leader>", "w"], "commands": [":w!"] },
+        { "before": ["<leader>", "x"], "commands": [":q"] },
 
         // Redo
         { "before": [ "<leader>", "r" ], "commands": [ "redo" ] },
@@ -131,15 +131,15 @@
         {
             "before": [ "<leader>", "c", "c" ],
             "commands": [ "workbench.action.focusActiveEditorGroup" ]
-        },
+        }
 
         // Terminal
         { "before": [ "<leader>", "t" ], "commands": [ "workbench.action.terminal.toggleTerminal" ] },
 
-        // Pin tab / keep tab open
-        { "before": [ "<leader>", "t", "p" ], "commands": [ "workbench.action.pinEditor" ] },
-        { "before": [ "<leader>", "t", "u" ], "commands": [ "workbench.action.unpinEditor" ] },
-        { "before": [ "<leader>", "t", "o" ], "commands": [ "workbench.action.keepEditor" ] },
+        // Pin tab / keep tab open (moved to <leader>b namespace to avoid terminal delay)
+        { "before": [ "<leader>", "b", "p" ], "commands": [ "workbench.action.pinEditor" ] },
+        { "before": [ "<leader>", "b", "u" ], "commands": [ "workbench.action.unpinEditor" ] },
+        { "before": [ "<leader>", "b", "o" ], "commands": [ "workbench.action.keepEditor" ] },
 
         // Switch to sidebar items
         {
@@ -151,6 +151,11 @@
             "before": [ "<leader>", "s", "s" ],
             "commands": [ "workbench.files.action.showActiveFileInExplorer" ]
         },
+        // SQL Server / Database Explorer
+        {
+            "before": [ "<leader>", "s", "q", "l" ],
+            "commands": [ "workbench.view.extension.objectExplorer" ]
+        },
         {
             "before": [ "<leader>", "g", "g" ],
             "commands": [ "workbench.view.scm" ]
@@ -158,7 +163,11 @@
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         // Format selection
-        { "before": [ "<leader>", "=" ], "commands": [ "editor.action.formatSelection" ] }
+        { "before": [ "<leader>", "=" ], "commands": [ "editor.action.formatSelection" ] },
+
+        // Expand / shrink selection by syntax
+        { "before": [ "<leader>", "]" ], "commands": [ "editor.action.smartSelect.expand" ] },
+        { "before": [ "<leader>", "[" ], "commands": [ "editor.action.smartSelect.shrink" ] },
     ],
 
     "git.autofetch": true,

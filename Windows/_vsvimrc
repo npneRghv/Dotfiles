@@ -82,9 +82,10 @@ nnoremap <leader>us :vsc Edit.RemoveAndSort<CR>
 nnoremap <leader>fv :vsc EditorContextMenus.CodeWindow.GoToView<CR>
 nnoremap <leader>fc :vsc OtherContextMenus.HTMLContext.GoToController<CR>
 
-" Tab related
-nnoremap <leader>tp :vsc Window.PinTab<CR>
-nnoremap <leader>to :vsc Window.KeepTabOpen<CR>
+" Tab related (moved to <leader>b namespace to avoid terminal delay)
+nnoremap <leader>bp :vsc Window.PinTab<CR>
+nnoremap <leader>bu :vsc Window.PinTab<CR>
+nnoremap <leader>bo :vsc Window.KeepTabOpen<CR>
 
 " Sync and collapse solution explorer
 nnoremap <leader>ss :vsc SolutionExplorer.SyncWithActiveDocument<CR>
