@@ -81,6 +81,9 @@
     "vim.incsearch": true,
     "vim.ignorecase": true,
     "vim.smartcase": true,
+    "vim.handleKeys": {
+        "<C-p>": false
+    },
     "vim.normalModeKeyBindingsNonRecursive": [
         // LSP navigation
         { "before": [ "g", "i" ], "commands": [ "editor.action.goToImplementation" ] },
@@ -113,25 +116,13 @@
 
         // Code group
         {
-            "before": ["<leader>", "c", "a"],
-            "commands": ["editor.action.quickFix"]
-        },
-        {
             "before": ["<leader>", "c", "i"],
             "commands": ["editor.action.showHover"]
-        },
-        {
-            "before": [ "<leader>", "c", "s" ],
-            "commands": [ "workbench.action.quickOpen" ]
         },
         {
             "before": ["<leader>", "g", "e"],
             "commands": ["workbench.actions.view.problems"]
         },
-        {
-            "before": [ "<leader>", "c", "c" ],
-            "commands": [ "workbench.action.focusActiveEditorGroup" ]
-        }
 
         // Terminal
         { "before": [ "<leader>", "t" ], "commands": [ "workbench.action.terminal.toggleTerminal" ] },

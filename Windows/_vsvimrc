@@ -34,14 +34,8 @@ nnoremap <leader>[ :vsc Edit.ContractSelection<CR>
 " Redo
 nnoremap <leader>r :vsc Edit.Redo<CR>
 
-" Code actions / quick fix (lightbulb)
-nnoremap <leader>ca :vsc View.QuickActions<CR>
-
 " Quick info / hover docs
 nnoremap <leader>ci :vsc Edit.QuickInfo<CR>
-
-" Navigate to symbol
-nnoremap <leader>cs :vsc Edit.GoToAll<CR>
 
 " Diagnostics / error list
 nnoremap <leader>ge :vsc View.ErrorList<CR>
