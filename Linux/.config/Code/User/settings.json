@@ -3,7 +3,6 @@
     "terminal.integrated.fontSize": 11,
     "editor.fontLigatures": true,
     "editor.lineNumbers": "relative",
-    "workbench.colorTheme": "Quiet Light",
     "workbench.iconTheme": "a-file-icon-vscode",
     "editor.fontSize": 10.5,
     "editor.cursorSurroundingLines": 10,
@@ -237,5 +236,6 @@
     "scm.inputFontSize": 11,
     "markdown.preview.fontSize": 12,
     "diffEditor.renderSideBySide": true,
-    "claudeCode.preferredLocation": "panel"
+    "claudeCode.preferredLocation": "panel",
+    "workbench.colorTheme": "Light 2026"
 }
