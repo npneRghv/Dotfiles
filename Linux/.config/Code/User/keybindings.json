@@ -50,7 +50,8 @@
     },
     {
         "key": "ctrl+tab",
-        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditor"
+        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditor",
+        "when": "!inEditorsPicker"
     },
     {
         "key": "ctrl+tab",
@@ -58,7 +59,8 @@
     },
     {
         "key": "ctrl+shift+tab",
-        "command": "workbench.action.quickOpenLeastRecentlyUsedEditor"
+        "command": "workbench.action.quickOpenLeastRecentlyUsedEditor",
+        "when": "!inEditorsPicker"
     },
     {
         "key": "ctrl+shift+tab",
