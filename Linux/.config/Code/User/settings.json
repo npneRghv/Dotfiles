@@ -237,5 +237,8 @@
     "markdown.preview.fontSize": 12,
     "diffEditor.renderSideBySide": true,
     "claudeCode.preferredLocation": "panel",
-    "workbench.colorTheme": "Light 2026"
+    "workbench.colorTheme": "Light 2026",
+    "[markdown]": {
+        "diffEditor.ignoreTrimWhitespace": false
+    }
 }
