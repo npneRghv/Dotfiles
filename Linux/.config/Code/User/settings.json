@@ -231,14 +231,19 @@
         }
     ],
     "chat.editor.fontSize": 12,
-    "chat.fontSize": 12,
+    "chat.fontSize": 12.5,
     "debug.console.fontSize": 12,
     "scm.inputFontSize": 11,
-    "markdown.preview.fontSize": 12,
+    "markdown.preview.fontSize": 12.5,
     "diffEditor.renderSideBySide": true,
     "claudeCode.preferredLocation": "panel",
-    "workbench.colorTheme": "Light 2026",
+    "workbench.colorTheme": "Anthropic Mist",
     "[markdown]": {
         "diffEditor.ignoreTrimWhitespace": false
-    }
+    },
+    "workbench.editorAssociations": {
+        "{hexdiff}:/**/*.*": "hexEditor.hexedit",
+        "*.sql": "hexEditor.hexedit"
+    },
+    "claudeCode.initialPermissionMode": "plan"
 }
