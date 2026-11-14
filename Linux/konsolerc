@@ -1,0 +1,10 @@
+MenuBar=Disabled
+
+[Desktop Entry]
+DefaultProfile=Mantiscustom dark.profile
+
+[General]
+ConfigVersion=1
+
+[MainWindow]
+MenuBar=Disabled
