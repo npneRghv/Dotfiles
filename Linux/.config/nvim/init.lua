@@ -47,7 +47,7 @@ vim.opt.sidescrolloff = 10
 -- ============================================
 -- Colors
 -- ============================================
-vim.opt.t_Co = 256
+vim.opt.termguicolors = true
 vim.cmd("syntax on")
 
 -- ============================================
@@ -55,7 +55,7 @@ vim.cmd("syntax on")
 -- ============================================
 if vim.g.neovide then
   -- Font
-  vim.g.neovide_font = "JetBrainsMono Nerd Font"
+  vim.o.guifont = "Noto Sans Mono:h9"
 
   -- Window size (approximate equivalent of lines=50 columns=95)
   -- Neovide sets these via command-line args, not config vars
@@ -63,7 +63,7 @@ if vim.g.neovide then
   -- Hide menu bar, toolbar, scrollbar
   vim.g.neovide_hide_menu = true
   vim.g.neovide_hide_toolbar = true
-  vim.g.neovide_transparency = 1.0
+  vim.g.neovide_opacity = 1.0
 
   -- Cursor
   vim.g.neovide_cursor_animation_length = 0.1
