@@ -77,7 +77,7 @@ vim.g.mapleader = " "
 vim.g.localleader = "\\"
 
 -- ============================================
--- Pane/split navigation (Space + h/j/k/l)
+-- Pane navigation (leader + h/j/k/l)
 -- ============================================
 vim.api.nvim_set_keymap("n", "<Leader>h", "<C-w>h", { noremap = true })
 vim.api.nvim_set_keymap("n", "<Leader>j", "<C-w>j", { noremap = true })
@@ -85,25 +85,38 @@ vim.api.nvim_set_keymap("n", "<Leader>k", "<C-w>k", { noremap = true })
 vim.api.nvim_set_keymap("n", "<Leader>l", "<C-w>l", { noremap = true })
 
 -- ============================================
+-- Tab navigation (leader + comma/period)
+-- ============================================
+vim.api.nvim_set_keymap("n", "<Leader>,", "gt", { noremap = true })
+vim.api.nvim_set_keymap("n", "<Leader>.", "gT", { noremap = true })
+
+-- ============================================
+-- Pane resize (leader + p + h/j/k/l)
+-- ============================================
+vim.api.nvim_set_keymap("n", "<LocalLeader>h", "<C-w><", { noremap = true })
+vim.api.nvim_set_keymap("n", "<LocalLeader>j", "<C-w>+", { noremap = true })
+vim.api.nvim_set_keymap("n", "<LocalLeader>k", "<C-w>-", { noremap = true })
+vim.api.nvim_set_keymap("n", "<LocalLeader>l", "<C-w>>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<LocalLeader>=", "<C-w>=", { noremap = true })
+
+-- ============================================
+-- Pane swap (leader + H/J/K/L)
+-- ============================================
+vim.api.nvim_set_keymap("n", "<Leader>H", "<C-w>H", { noremap = true })
+vim.api.nvim_set_keymap("n", "<Leader>J", "<C-w>J", { noremap = true })
+vim.api.nvim_set_keymap("n", "<Leader>K", "<C-w>K", { noremap = true })
+vim.api.nvim_set_keymap("n", "<Leader>L", "<C-w>L", { noremap = true })
+
+-- ============================================
+-- Maximize/unmaximize (leader + > / <)
+-- ============================================
+vim.api.nvim_set_keymap("n", "<Leader>>", "<C-w_F>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<Leader><", "<C-w_R>", { noremap = true })
+
+-- ============================================
 -- Terminal mode toggle
 -- ============================================
 vim.api.nvim_set_keymap("t", "<C-o>", "<C-\\><C-n>", { noremap = true })
-
--- ============================================
--- Window resize
--- ============================================
-vim.api.nvim_set_keymap("n", "<Leader>.", "<C-w>>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<Leader>,", "<C-w><", { noremap = true })
-vim.api.nvim_set_keymap("n", "<LocalLeader>.", "<C-w>+", { noremap = true })
-vim.api.nvim_set_keymap("n", "<LocalLeader>,", "<C-w>-", { noremap = true })
-vim.api.nvim_set_keymap("n", "<LocalLeader>=", "<C-w>=", { noremap = true })
-vim.api.nvim_set_keymap("t", "<Leader>.", "<C-w>>", { noremap = true })
-vim.api.nvim_set_keymap("t", "<Leader>,", "<C-w><", { noremap = true })
-vim.api.nvim_set_keymap("t", "<LocalLeader>.", "<C-w>+", { noremap = true })
-vim.api.nvim_set_keymap("t", "<LocalLeader>,", "<C-w>-", { noremap = true })
-vim.api.nvim_set_keymap("t", "<LocalLeader>=", "<C-w>=", { noremap = true })
-
-
 
 -- ============================================
 -- Status / wrap
