@@ -77,6 +77,14 @@ vim.g.mapleader = " "
 vim.g.localleader = "\\"
 
 -- ============================================
+-- Pane/split navigation (Space + h/j/k/l)
+-- ============================================
+vim.api.nvim_set_keymap("n", "<Leader>h", "<C-w>h", { noremap = true })
+vim.api.nvim_set_keymap("n", "<Leader>j", "<C-w>j", { noremap = true })
+vim.api.nvim_set_keymap("n", "<Leader>k", "<C-w>k", { noremap = true })
+vim.api.nvim_set_keymap("n", "<Leader>l", "<C-w>l", { noremap = true })
+
+-- ============================================
 -- Terminal mode toggle
 -- ============================================
 vim.api.nvim_set_keymap("t", "<C-o>", "<C-\\><C-n>", { noremap = true })
@@ -95,11 +103,7 @@ vim.api.nvim_set_keymap("t", "<LocalLeader>.", "<C-w>+", { noremap = true })
 vim.api.nvim_set_keymap("t", "<LocalLeader>,", "<C-w>-", { noremap = true })
 vim.api.nvim_set_keymap("t", "<LocalLeader>=", "<C-w>=", { noremap = true })
 
--- ============================================
--- Toggle fullscreen (current split)
--- ============================================
-vim.api.nvim_set_keymap("n", "<LocalLeader><S-+>", "<Cmd>wincmd F<CR>", { noremap = true })
-vim.api.nvim_set_keymap("t", "<LocalLeader><S-+>", "<Cmd>wincmd F<CR>", { noremap = true })
+
 
 -- ============================================
 -- Status / wrap
