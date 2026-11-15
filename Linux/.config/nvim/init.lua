@@ -55,7 +55,7 @@ vim.cmd("syntax on")
 -- ============================================
 if vim.g.neovide then
   -- Font
-  vim.o.guifont = "Noto Sans Mono SemiCondensed Light:h9"
+  vim.o.guifont = "Noto Sans Mono :h9"
 
   -- Window size (approximate equivalent of lines=50 columns=95)
   -- Neovide sets these via command-line args, not config vars
