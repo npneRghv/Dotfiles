@@ -71,9 +71,35 @@ if vim.g.neovide then
 end
 
 -- ============================================
+-- Leader / Local leader
+-- ============================================
+vim.g.mapleader = " "
+vim.g.localleader = "\\"
+
+-- ============================================
 -- Terminal mode toggle
 -- ============================================
 vim.api.nvim_set_keymap("t", "<C-o>", "<C-\\><C-n>", { noremap = true })
+
+-- ============================================
+-- Window resize
+-- ============================================
+vim.api.nvim_set_keymap("n", "<Leader>.", "<C-w>>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<Leader>,", "<C-w><", { noremap = true })
+vim.api.nvim_set_keymap("n", "<LocalLeader>.", "<C-w>+", { noremap = true })
+vim.api.nvim_set_keymap("n", "<LocalLeader>,", "<C-w>-", { noremap = true })
+vim.api.nvim_set_keymap("n", "<LocalLeader>=", "<C-w>=", { noremap = true })
+vim.api.nvim_set_keymap("t", "<Leader>.", "<C-w>>", { noremap = true })
+vim.api.nvim_set_keymap("t", "<Leader>,", "<C-w><", { noremap = true })
+vim.api.nvim_set_keymap("t", "<LocalLeader>.", "<C-w>+", { noremap = true })
+vim.api.nvim_set_keymap("t", "<LocalLeader>,", "<C-w>-", { noremap = true })
+vim.api.nvim_set_keymap("t", "<LocalLeader>=", "<C-w>=", { noremap = true })
+
+-- ============================================
+-- Toggle fullscreen (current split)
+-- ============================================
+vim.api.nvim_set_keymap("n", "<LocalLeader><S-+>", "<Cmd>wincmd F<CR>", { noremap = true })
+vim.api.nvim_set_keymap("t", "<LocalLeader><S-+>", "<Cmd>wincmd F<CR>", { noremap = true })
 
 -- ============================================
 -- Status / wrap
