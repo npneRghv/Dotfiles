@@ -3,3 +3,6 @@
 	email = raghav.neupane@outlook.com
 [init]
 	defaultBranch = master
+[credential]
+        helper = libsecret
+
